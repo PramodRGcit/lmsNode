@@ -13,6 +13,7 @@ const viewAllAuthors = function(req, res){
     conn.query('select * from tbl_author', function(error, authors){
         if(error) throw error;
         // res.send(authors);
+        console.log('test');
         res.render('view-authors',{'authors': authors});
     })
         // request.get('http://localhost:8080/lms/readAuthors', function(error, response, body){
